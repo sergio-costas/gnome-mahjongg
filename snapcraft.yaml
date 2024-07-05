@@ -15,10 +15,7 @@ description: |
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict
-base: core22
-
-build-snaps:
-  - gnome-42-2204/latest/candidate
+base: core24
 
 slots:
   # for GtkApplication registration

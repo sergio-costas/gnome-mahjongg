@@ -1,4 +1,5 @@
 name: gnome-mahjongg
+version: git
 adopt-info: gnome-mahjongg
 summary: Match tiles and clear the board
 description: |
@@ -41,11 +42,11 @@ parts:
 # ext:updatesnap
     source: https://gitlab.gnome.org/GNOME/gnome-mahjongg.git
     source-type: git
-    source-tag: '3.40.1'
+    source-tag: '47.0'
     source-depth: 1
     parse-info: [usr/share/metainfo/org.gnome.Mahjongg.appdata.xml]
     override-build: |
-      sed -i -e 's|=org.gnome.Mahjongg$|=${SNAP}/meta/gui/org.gnome.Mahjongg.svg|g' $CRAFT_PART_SRC/data/org.gnome.Mahjongg.desktop.in
+      sed -i -e 's|=org.gnome.Mahjongg$|=${SNAP}/meta/gui/org.gnome.Mahjongg.svg|g' $CRAFT_PART_SRC/data/org.gnome.Mahjongg.desktop.in.in
       craftctl default
       mkdir -p $CRAFT_PART_INSTALL/meta/gui/
       cp $CRAFT_PART_SRC/data/icons/hicolor/scalable/org.gnome.Mahjongg.svg $CRAFT_PART_INSTALL/meta/gui/

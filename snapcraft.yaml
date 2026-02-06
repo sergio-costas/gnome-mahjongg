@@ -16,7 +16,7 @@ description: |
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict
 base: core24
-
+fad
 slots:
   # for GtkApplication registration
   gnome-mahjongg:
